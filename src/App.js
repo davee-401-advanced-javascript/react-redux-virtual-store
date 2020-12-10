@@ -1,8 +1,16 @@
+import Products from './components/storefront/products.js';
+
+import Header from './components/header/header.js';
+import StoreFront from './components/storefront/storefront.js';
+import Footer from './components/footer/footer.js';
 
 function App() {
   return (
-
-    <h1> hello </h1>
+    <>
+      <Header/>
+      <StoreFront/>
+      <Footer/>
+    </>
   );
 }
 
