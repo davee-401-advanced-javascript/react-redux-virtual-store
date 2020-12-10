@@ -1,4 +1,3 @@
-import Products from './components/storefront/products.js';
 
 import Header from './components/header/header.js';
 import StoreFront from './components/storefront/storefront.js';
