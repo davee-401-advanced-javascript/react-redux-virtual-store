@@ -24,7 +24,6 @@ export default function Categories() {
       <ButtonGroup variant="text" color="primary" aria-label="text primary button group">
         <Button>Food</Button>
         <Button>Categories</Button>
-        <Button>Three</Button>
       </ButtonGroup>
 
     </div>

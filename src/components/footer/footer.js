@@ -59,12 +59,12 @@ function Footer() {
     <>
       <Container maxWidth="lg" component="footer" className={classes.footer}>
         <Grid container spacing={4} justify="space-around">
-          
+
 
           {/* How do these 3 combine to make this a responsive grid? */}
           <Grid item xs={12} md={6} lg={3}>
             <Typography variant="h6" color="textPrimary" gutterBottom>
-              Column 1
+              Davee Sok & Chris Bortel
             </Typography>
             <ul>
               <li> <Link href="#" variant="subtitle1" color="textSecondary">Item 1</Link> </li>
