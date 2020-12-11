@@ -33,3 +33,33 @@
 #### UML
 
 Link to an image of the UML for your application and response to events
+
+```
+Pseduo Code
+
+<App>
+// Will bring in Provider React Redux
+
+
+  <Header/>
+
+  <StoreFront>
+
+
+    <Categories/>
+
+
+
+    <CurrentCategories/>
+
+
+    <Products/>
+
+
+
+    </StoreFront>
+  <Footer/>
+</App>
+
+
+```
