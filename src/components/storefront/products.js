@@ -37,6 +37,7 @@ function Products() {
   let products = useSelector( (state) => state.category.products);
   products = products.filter( product => product.category === activeCategory.name);
 
+  console.log(products);
 
   return (
 
@@ -55,8 +56,7 @@ function Products() {
                     <CardActionArea>
                       <CardMedia
                         className={classes.media}
-                        image="/static/images/cards/contemplative-reptile.jpg"
-                        title="Contemplative Reptile"
+                        image={product.imageUrl}
                       />
                       <CardContent>
                         <Typography gutterBottom variant="h5" component="h2">
