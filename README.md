@@ -6,7 +6,7 @@
 
 <!-- - [ci/cd](http://xyz.com) (GitHub Actions) -->
 
-- [Front-End application](http://xyz.com)
+- [Front-End application](https://daveesvirtualstorelab.netlify.app/)
 - [API used for Products & Categories](https://davee-auth-api-server.herokuapp.com/)
 
 ### Tests:
@@ -15,7 +15,7 @@
 - Any tests of note?
 - Describe any tests that you did not complete, skipped, etc -->
 
-Currently No Tests.
+Currently No Tests Written.
 
 ### UML:
 
