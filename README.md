@@ -1,38 +1,25 @@
-# Virtual Store
+# Virtual Store Lab
 
-## Project: Project Name Here
+## Author: Davee Sok / Chris Bortel
 
-### Author: Davee Sok / Chris Bortel
+### Links and Resources:
 
-### Links and Resources
+<!-- - [ci/cd](http://xyz.com) (GitHub Actions) -->
 
-- [ci/cd](http://xyz.com) (GitHub Actions)
-- [front-end application](http://xyz.com) (when applicable)
+- [Front-end application](http://xyz.com) (when applicable)
+- [API used for Products & Categories](https://davee-auth-api-server.herokuapp.com/)
 
-### Setup
+### Tests:
 
-#### `.env` requirements (where applicable)
-
-<!-- i.e.
-
-- `PORT` - Port Number
-- `MONGODB_URI` - URL to the running mongo instance/db -->
-
-#### How to initialize/run your application (where applicable)
-
-- e.g. `npm start`
-
-#### How to use your library (where applicable)
-
-#### Tests
-
-- How do you run tests?
+<!-- - How do you run tests?
 - Any tests of note?
-- Describe any tests that you did not complete, skipped, etc
+- Describe any tests that you did not complete, skipped, etc -->
 
-#### UML
+Currently No Tests.
 
-Link to an image of the UML for your application and response to events
+### UML:
+
+<!-- Link to an image of the UML for your application and response to events -->
 
 ```
 Pseduo Code
