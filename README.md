@@ -39,22 +39,25 @@ Pseduo Code
 
 <App>
 // Will bring in Provider React Redux
-
+// Redux Store
+  // States
+    - active category
+    - category list
+    - products list
+  // Actions
+    - set active category(may need to set default to first)
 
   <Header/>
-
   <StoreFront>
-
-
     <Categories/>
-
+      // Will list out all categories
 
 
     <CurrentCategories/>
-
+      // Will render active category
 
     <Products/>
-
+      // Will filter list based on active category
 
 
     </StoreFront>
