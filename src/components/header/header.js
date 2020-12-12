@@ -30,7 +30,7 @@ export default function Header() {
             
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            Davee / Chris Store
+            Davee's Store
           </Typography>
           <Button color="inherit">Cart</Button>
         </Toolbar>

@@ -30,7 +30,7 @@ function Footer() {
           {/* How do these 3 combine to make this a responsive grid? */}
           <Grid item xs={12} md={6} lg={3}>
             <Typography variant="h6" color="textPrimary" gutterBottom>
-              Davee Sok & Chris Bortel
+              Davee Sok
             </Typography>
             <ul>
               <li> <Link href="#" variant="subtitle1" color="textSecondary">Item 1</Link> </li>
