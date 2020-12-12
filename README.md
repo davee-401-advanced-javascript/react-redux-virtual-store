@@ -25,28 +25,37 @@ Currently No Tests Written.
 ```
 Pseduo Code
 
-<App>
-// Will bring in Provider React Redux
-// Redux Store
+// Bring in Provider React Redux
+// Redux Store will have
   // States
     - active category
     - category list
     - products list
   // Actions
-    - set active category(may need to set default to first)
+    - set active category
+    - intializeProducts
+    - initializeCategory
+<App>
+// Will need to get API Data and intialize
+// Actions: initalizeCategory, intializeProducts
 
   <Header/>
   <StoreFront>
+
     <Categories/>
       // Will list out all categories
-
+      // States: categories
+      // Actions: changeCategory
 
     <CurrentCategories/>
       // Will render active category
+      // States: activeCategory
+      // Actions: None
 
     <Products/>
       // Will filter list based on active category
-
+      // States: activeCategory, products
+      // Actions: None
 
     </StoreFront>
   <Footer/>
