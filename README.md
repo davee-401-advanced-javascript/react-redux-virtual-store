@@ -6,7 +6,7 @@
 
 <!-- - [ci/cd](http://xyz.com) (GitHub Actions) -->
 
-- [Front-end application](http://xyz.com) (when applicable)
+- [Front-End application](http://xyz.com)
 - [API used for Products & Categories](https://davee-auth-api-server.herokuapp.com/)
 
 ### Tests:
