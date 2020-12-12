@@ -26,9 +26,6 @@ export default function Categories() {
   const classes = useStyles();
   const dispatch = useDispatch();
   const categories = useSelector( (state) => state.category.categories);
-  const activeCategory = useSelector( (state)  => state.category.activeCategory);
-
-  console.log('activeCategory:', activeCategory);
 
   const changeActive = (category) => {
     dispatch(changeCategory(category));
