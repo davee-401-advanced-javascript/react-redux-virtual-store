@@ -41,7 +41,7 @@ export default function Categories() {
         {
           categories.map(category => {
             return (
-              <Button onClick={()=> changeActive(category)}>{category.name}</Button>
+              <Button key={category._id} onClick={()=> changeActive(category)}>{category.name}</Button>
             )
           })
         }
