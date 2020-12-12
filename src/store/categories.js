@@ -1,6 +1,11 @@
 const initialState = {
 
-  activeCategory: "Food",
+  activeCategory: {
+    "_id": "5fd41f684c7c920017a6dd9e",
+    "name": "Electronics",
+    "description": "Electronics Category and stuff",
+    "__v": 0
+  },
   categories: [
     {
       "_id": "5fd41f684c7c920017a6dd9e",
