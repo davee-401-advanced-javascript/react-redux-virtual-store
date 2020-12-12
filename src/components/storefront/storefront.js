@@ -3,7 +3,7 @@ import React, {useEffect} from 'react';
 import {useDispatch} from 'react-redux';
 
 import {initalizeCategory} from '../../store/categories.js';
-import {initalizeProducts} from '../../store/categories.js';
+import {initalizeProducts} from '../../store/products.js';
 
 import Categories from './categories.js';
 import CurrentCategories from './current-category.js';
