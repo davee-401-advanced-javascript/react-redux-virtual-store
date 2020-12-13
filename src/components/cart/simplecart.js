@@ -31,7 +31,6 @@ function SimpleCart() {
   const destroy = (product) => {
     dispatch(deleteFromCart(product))
   }
-
   // console.log('cart: ', cart);
 
   return (
