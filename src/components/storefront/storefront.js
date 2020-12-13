@@ -3,10 +3,11 @@ import React, {useEffect} from 'react';
 import {useDispatch} from 'react-redux';
 
 import {initalizeCategory} from '../../store/categories.js';
-import {initalizeProducts} from '../../store/categories.js';
+import {initalizeProducts} from '../../store/products.js';
 
 import Categories from './categories.js';
 import CurrentCategories from './current-category.js';
+import SimpleCart from '../cart/simplecart.js';
 import Products from './products.js';
 
 function StoreFront() {
@@ -36,6 +37,7 @@ function StoreFront() {
 
   return (
     <>
+      <SimpleCart/>
       <Categories/>
       <CurrentCategories/>
       <Products/>

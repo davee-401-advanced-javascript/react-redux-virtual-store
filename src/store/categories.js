@@ -1,7 +1,6 @@
 const initialState = {
   activeCategory: {},
   categories: [],
-  products: []
 }
 
 
@@ -17,11 +16,7 @@ export default function reducer( state = initialState, action) {
         categories: payload, 
         activeCategory: payload[0]
       }
-    case "INITIALIZEPRODUCTS":
-      return {
-        ...state,
-        products: payload
-      }
+
     default:
       return state;
   }
@@ -41,9 +36,3 @@ export const initalizeCategory = (categoryArray) => {
   }
 }
 
-export const initalizeProducts = (productsArray) => {
-  return {
-    type: 'INITIALIZEPRODUCTS', 
-    payload: productsArray
-  }
-}

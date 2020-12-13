@@ -1,4 +1,6 @@
 import React from 'react';
+import {useSelector} from 'react-redux';
+
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -21,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Header() {
   const classes = useStyles();
+  const cart = useSelector( state => state.cart.cart);
 
   return (
     <div className={classes.root}>
@@ -32,7 +35,7 @@ export default function Header() {
           <Typography variant="h6" className={classes.title}>
             Davee's Store
           </Typography>
-          <Button color="inherit">Cart</Button>
+          <Button color="inherit">Cart({cart.length})</Button>
         </Toolbar>
       </AppBar>
     </div>
