@@ -31,7 +31,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-
 function Products() {
 
   const classes = useStyles();
@@ -45,6 +44,7 @@ function Products() {
   }
 
   console.log('products:', products);
+
   return (
 
     <>
