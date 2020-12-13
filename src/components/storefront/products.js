@@ -43,7 +43,7 @@ function Products() {
     dispatch(addToCart(product));
   }
 
-  console.log('products:', products);
+  // console.log('products:', products);
 
   return (
 

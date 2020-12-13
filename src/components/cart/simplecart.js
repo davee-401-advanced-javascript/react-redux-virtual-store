@@ -28,25 +28,24 @@ function SimpleCart() {
   let cart = useSelector( state => state.cart.cart);
   let dispatch = useDispatch();
 
+  const destroy = (product) => {
+    dispatch(deleteFromCart(product))
+  }
 
-
-
-
-  console.log('cart: ', cart);
+  // console.log('cart: ', cart);
 
   return (
     <>
-    <h1> SimpleCart</h1>
-    <List dense component="nav" className={classes.root}>
+    <List component="nav" className={classes.root}>
 
     {
       cart.map(product => {
         return (
 
-          <ListItem key={product._id} dense>
+          <ListItem key={product._id} >
             <ListItemText primary={product.name} />
-            <IconButton aria-label="delete" >
-              <DeleteIcon onClick={() => dispatch(deleteFromCart(product))} dense/>
+            <IconButton aria-label="delete" onClick={() => destroy(product)}>
+              <DeleteIcon />
             </IconButton >
           </ListItem>
         )

@@ -9,9 +9,12 @@ export default function reducer( state = initialState, action) {
     case "ADDTOCART":
       return { cart: [...state.cart, payload]}
     case  "DELETEFROMCART":
-      return state.cart.filter( product => {
+
+      state.cart = state.cart.filter( product => {
         return product._id !== payload._id
-      })
+      });
+
+      return state;
     default:
       return state; 
   }
