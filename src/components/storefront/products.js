@@ -37,8 +37,7 @@ function Products() {
   let products = useSelector( (state) => state.products.products);
   products = products.filter( product => product.category === activeCategory.name);
 
-  console.log(products);
-
+  console.log('products:', products);
   return (
 
     <>
