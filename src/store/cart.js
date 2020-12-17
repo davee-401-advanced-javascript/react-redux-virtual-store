@@ -7,14 +7,13 @@ export default function reducer( state = initialState, action) {
 
   switch(type) {
     case "ADDTOCART":
-      return { cart: [...state.cart, payload]}
+      return { ...state, cart: [...state.cart, payload]}
     case  "DELETEFROMCART":
-
-      state.cart = state.cart.filter( product => {
+      let filtered = state.cart.filter( product => {
         return product._id !== payload._id
       });
+      return { ...state, cart: filtered}
 
-      return state;
     default:
       return state; 
   }
