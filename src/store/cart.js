@@ -27,7 +27,10 @@ export default function reducer( state = initialState, action) {
       }
 
     case  "DELETEFROMCART":
-      return state;
+
+      let newState = {...state}
+      delete newState[payload];
+      return newState;
       
 
     default:
