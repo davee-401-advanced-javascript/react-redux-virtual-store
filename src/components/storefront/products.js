@@ -35,7 +35,7 @@ function Products() {
 
   const classes = useStyles();
   let activeCategory = useSelector( (state) => state.category.activeCategory);
-  let products = useSelector( (state) => state.products.products);
+  let products = useSelector( (state) => state.products);
   products = products.filter( product => product.category === activeCategory.name);
   const dispatch = useDispatch();
 
