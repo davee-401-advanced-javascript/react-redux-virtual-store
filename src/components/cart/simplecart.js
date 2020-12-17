@@ -25,24 +25,23 @@ const useStyles = makeStyles((theme) => ({
 function SimpleCart() {
 
   const classes = useStyles();
-  let cart = useSelector( state => state.cart.cart);
   let dispatch = useDispatch();
+  let cart = useSelector( state => state.cart);
 
   const destroy = (product) => {
     dispatch(deleteFromCart(product))
   }
-  // console.log('cart: ', cart);
 
   return (
     <>
     <List component="nav" className={classes.root}>
 
     {
-      cart.map(product => {
+      Object.entries(cart).map(product => {
         return (
-
-          <ListItem key={product._id} >
-            <ListItemText primary={product.name} />
+          <ListItem key={product[0]} >
+            <ListItemText primary={product[1].name}  />
+            <ListItemText secondary={'QTY: ' + product[1].count}  />
             <IconButton aria-label="delete" onClick={() => destroy(product)}>
               <DeleteIcon />
             </IconButton >

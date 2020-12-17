@@ -90,6 +90,14 @@ Pseduo Code
           Actions
             - addToCart
 
+
+            // if product count is more than 0
+              // will need to deduct item from product
+            // do put request to update that product
+            // get all from database
+
+
+
     </StoreFront>
   <Footer/>
 </App>

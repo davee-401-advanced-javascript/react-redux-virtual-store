@@ -23,7 +23,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Header() {
   const classes = useStyles();
-  const cart = useSelector( state => state.cart.cart);
+  const cart = useSelector( state => state.cart);
+  let cartLength = Object.values(cart).length;
 
   return (
     <div className={classes.root}>
@@ -35,7 +36,7 @@ export default function Header() {
           <Typography variant="h6" className={classes.title}>
             Davee's Store
           </Typography>
-          <Button color="inherit">Cart({cart.length})</Button>
+          <Button color="inherit">Cart({cartLength})</Button>
         </Toolbar>
       </AppBar>
     </div>

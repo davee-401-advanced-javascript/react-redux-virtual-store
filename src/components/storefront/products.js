@@ -74,7 +74,7 @@ function Products() {
                           {product.description}
                         </Typography>
                         <Typography variant="body2" color="textSecondary" component="p">
-                          In Stock: {product.inStock}
+                          In Stock:{product.inStock}
                         </Typography>
                       </CardContent>
                     </CardActionArea>
