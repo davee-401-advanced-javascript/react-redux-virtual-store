@@ -1,6 +1,6 @@
 import React from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import { If, Then, Else, When, Unless, Switch, Case, Default } from 'react-if';
+import { When } from 'react-if';
 
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
