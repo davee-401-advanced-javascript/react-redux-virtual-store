@@ -35,15 +35,17 @@ function Products() {
 
   const classes = useStyles();
   let activeCategory = useSelector( (state) => state.category.activeCategory);
+
   let products = useSelector( (state) => state.products);
   products = products.filter( product => product.category === activeCategory.name);
+
   const dispatch = useDispatch();
 
   const add = (product) => {
     dispatch(addToCart(product));
   }
 
-  // console.log('products:', products);
+  console.log('products:', products);
 
   return (
 
@@ -70,6 +72,9 @@ function Products() {
                         </Typography>
                         <Typography variant="body2" color="textSecondary" component="p">
                           {product.description}
+                        </Typography>
+                        <Typography variant="body2" color="textSecondary" component="p">
+                          In Stock: {product.inStock}
                         </Typography>
                       </CardContent>
                     </CardActionArea>
