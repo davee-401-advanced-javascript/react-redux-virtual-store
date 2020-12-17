@@ -7,7 +7,6 @@ export default function reducer( state = initialState, action) {
     case "ADDTOCART":
 
       if(!state[payload._id]) {
-
         let newState = {
           ...state,
           [payload._id]: {
@@ -17,7 +16,6 @@ export default function reducer( state = initialState, action) {
         }
         return newState; 
       } else {
-
         let newState = {
           ...state,
           [payload._id]: {
@@ -27,11 +25,10 @@ export default function reducer( state = initialState, action) {
         }
         return newState;
       }
+
     case  "DELETEFROMCART":
-      let filtered = state.cart.filter( product => {
-        return product._id !== payload._id
-      });
-      return { ...state, cart: filtered}
+      return state;
+      
 
     default:
       return state; 

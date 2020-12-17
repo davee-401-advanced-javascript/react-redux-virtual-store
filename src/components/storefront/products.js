@@ -1,5 +1,6 @@
 import React from 'react';
 import {useDispatch, useSelector} from 'react-redux';
+import { If, Then, Else, When, Unless, Switch, Case, Default } from 'react-if';
 
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
@@ -79,9 +80,11 @@ function Products() {
                       </CardContent>
                     </CardActionArea>
                     <CardActions>
-                      <Button onClick={() => add(product)} size="small" color="primary">
-                        Add to Cart
-                      </Button>
+                      <When condition={product.inStock > 0}>
+                        <Button onClick={() => add(product)} size="small" color="primary">
+                          Add to Cart
+                        </Button>
+                      </When>
                       <Button size="small" color="primary">
                         View Details
                       </Button>
