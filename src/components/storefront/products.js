@@ -35,12 +35,13 @@ const useStyles = makeStyles((theme) => ({
 function Products() {
 
   const classes = useStyles();
+  const dispatch = useDispatch();
+  
   let activeCategory = useSelector( (state) => state.category.activeCategory);
 
   let products = useSelector( (state) => state.products);
   products = products.filter( product => product.category === activeCategory.name);
 
-  const dispatch = useDispatch();
 
   const add = (product) => {
     dispatch(addToCart(product));

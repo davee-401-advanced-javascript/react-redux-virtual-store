@@ -9,7 +9,6 @@ import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
 
 
-
 import {deleteFromCart} from '../../store/cart.js';
 
 
@@ -25,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
 function SimpleCart() {
 
   const classes = useStyles();
-  let dispatch = useDispatch();
+  const dispatch = useDispatch();
   let cart = useSelector( state => state.cart);
 
   const destroy = (product) => {
