@@ -10,6 +10,7 @@
 - [API used for Products & Categories](https://davee-auth-api-server.herokuapp.com/)
 - [Lab36 Pull Request](https://github.com/davee-401-advanced-javascript/storefront/pull/1)
 - [Lab37 Pull Request](https://github.com/davee-401-advanced-javascript/storefront/pull/3)
+- [Lab38 Pull Request](https://github.com/davee-401-advanced-javascript/storefront/pull/5)
 
 ### Tests:
 
