@@ -10,7 +10,7 @@ export default function reducer( state = initialState, action) {
         let newState = {
           ...state,
           [payload._id]: {
-            name: payload.name,
+            obj: payload,
             count: 1
           }
         }
@@ -19,7 +19,7 @@ export default function reducer( state = initialState, action) {
         let newState = {
           ...state,
           [payload._id]: {
-            name: payload.name,
+            obj: payload,
             count: state[payload._id].count+=1
           }
         }
@@ -29,7 +29,7 @@ export default function reducer( state = initialState, action) {
     case  "DELETEFROMCART":
 
       let newState = {...state}
-      delete newState[payload];
+      delete newState[payload.obj._id];
       return newState;
       
 

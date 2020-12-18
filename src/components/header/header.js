@@ -24,7 +24,9 @@ const useStyles = makeStyles((theme) => ({
 export default function Header() {
   const classes = useStyles();
   const cart = useSelector( state => state.cart);
-  let cartLength = Object.values(cart).length;
+  let cartLength = Object.values(cart).reduce((acc, obj) => {
+    return acc + obj.count;
+  },0);
 
   return (
     <div className={classes.root}>

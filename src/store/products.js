@@ -29,22 +29,31 @@ export const getProducts = () => async dispatch => {
   })
 }
 
-// need function to decrement instock item, do a put then a get
 
 export const decrementStock = (payload) => async dispatch => {
 
-  let updated = {
-    ...payload,
-    inStock: payload.inStock-=1
-  }
-  console.log('updated:', updated);
+  payload.inStock = payload.inStock-=1;
 
   await axios({
     method: 'PUT',
     url: `https://davee-auth-api-server.herokuapp.com/api/v1/products/${payload._id}`,
-    data: updated
+    data: payload
   })
 
   dispatch(getProducts());
+}
+
+export const putStockBack = (payload) => async dispatch => {
+
+  let amount = payload.count;
+  let newObj = payload.obj;
+  newObj.inStock = newObj.inStock+amount;
+
+  await axios({
+    method: 'PUT',
+    url: `https://davee-auth-api-server.herokuapp.com/api/v1/products/${newObj._id}`,
+    data: newObj
+  })
   
+  dispatch(getProducts());
 }
