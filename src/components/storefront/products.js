@@ -1,5 +1,6 @@
 import React from 'react';
 import {useDispatch, useSelector} from 'react-redux';
+import { When } from 'react-if';
 
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
@@ -13,6 +14,7 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardMedia from '@material-ui/core/CardMedia';
 
 import {addToCart} from '../../store/cart.js';
+import {decrementStock} from '../../store/products.js';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -34,16 +36,22 @@ const useStyles = makeStyles((theme) => ({
 function Products() {
 
   const classes = useStyles();
-  let activeCategory = useSelector( (state) => state.category.activeCategory);
-  let products = useSelector( (state) => state.products.products);
-  products = products.filter( product => product.category === activeCategory.name);
   const dispatch = useDispatch();
+  
+  let activeCategory = useSelector( (state) => state.category.activeCategory);
+
+  let products = useSelector( (state) => state.products);
+  products = products.filter( product => product.category === activeCategory.name);
+
 
   const add = (product) => {
     dispatch(addToCart(product));
+    dispatch(decrementStock(product));
+
+    // decrement one from product
   }
 
-  // console.log('products:', products);
+  console.log('products:', products);
 
   return (
 
@@ -71,12 +79,17 @@ function Products() {
                         <Typography variant="body2" color="textSecondary" component="p">
                           {product.description}
                         </Typography>
+                        <Typography variant="body2" color="textSecondary" component="p">
+                          In Stock:{product.inStock}
+                        </Typography>
                       </CardContent>
                     </CardActionArea>
                     <CardActions>
-                      <Button onClick={() => add(product)} size="small" color="primary">
-                        Add to Cart
-                      </Button>
+                      <When condition={product.inStock > 0}>
+                        <Button onClick={() => add(product)} size="small" color="primary">
+                          Add to Cart
+                        </Button>
+                      </When>
                       <Button size="small" color="primary">
                         View Details
                       </Button>

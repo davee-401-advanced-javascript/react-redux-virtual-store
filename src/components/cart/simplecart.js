@@ -9,8 +9,8 @@ import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
 
 
-
 import {deleteFromCart} from '../../store/cart.js';
+import {putStockBack} from '../../store/products.js';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -25,25 +25,25 @@ const useStyles = makeStyles((theme) => ({
 function SimpleCart() {
 
   const classes = useStyles();
-  let cart = useSelector( state => state.cart.cart);
-  let dispatch = useDispatch();
+  const dispatch = useDispatch();
+  let cart = useSelector( state => state.cart);
 
   const destroy = (product) => {
-    dispatch(deleteFromCart(product))
+    dispatch(deleteFromCart(product));
+    dispatch(putStockBack(product));
   }
-  // console.log('cart: ', cart);
 
   return (
     <>
     <List component="nav" className={classes.root}>
 
     {
-      cart.map(product => {
+      Object.entries(cart).map(product => {
         return (
-
-          <ListItem key={product._id} >
-            <ListItemText primary={product.name} />
-            <IconButton aria-label="delete" onClick={() => destroy(product)}>
+          <ListItem key={product[0]} >
+            <ListItemText primary={product[1].obj.name}  />
+            <ListItemText secondary={'QTY: ' + product[1].count}  />
+            <IconButton aria-label="delete" onClick={() => destroy(product[1])}>
               <DeleteIcon />
             </IconButton >
           </ListItem>

@@ -10,6 +10,7 @@
 - [API used for Products & Categories](https://davee-auth-api-server.herokuapp.com/)
 - [Lab36 Pull Request](https://github.com/davee-401-advanced-javascript/storefront/pull/1)
 - [Lab37 Pull Request](https://github.com/davee-401-advanced-javascript/storefront/pull/3)
+- [Lab38 Pull Request](https://github.com/davee-401-advanced-javascript/storefront/pull/5)
 
 ### Tests:
 
@@ -89,6 +90,14 @@ Pseduo Code
             - products
           Actions
             - addToCart
+
+
+            // if product count is more than 0
+              // will need to deduct item from product
+            // do put request to update that product
+            // get all from database
+
+
 
     </StoreFront>
   <Footer/>
