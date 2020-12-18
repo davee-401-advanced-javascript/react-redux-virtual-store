@@ -43,6 +43,6 @@ export const getCategories = () => async dispatch => {
 
   dispatch({
     type: 'GETCATEGORIES',
-    payload: categories.data.results
+    payload: categories.data.results,
   })
 }

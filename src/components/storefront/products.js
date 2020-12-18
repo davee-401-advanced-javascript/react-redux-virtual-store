@@ -14,6 +14,7 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardMedia from '@material-ui/core/CardMedia';
 
 import {addToCart} from '../../store/cart.js';
+import {decrementStock} from '../../store/products.js';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -45,6 +46,9 @@ function Products() {
 
   const add = (product) => {
     dispatch(addToCart(product));
+    dispatch(decrementStock(product));
+
+    // decrement one from product
   }
 
   console.log('products:', products);
