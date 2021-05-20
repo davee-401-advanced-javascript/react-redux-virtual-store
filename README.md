@@ -4,8 +4,6 @@
 
 ### Links and Resources:
 
-<!-- - [ci/cd](http://xyz.com) (GitHub Actions) -->
-
 - [Front-End Application](https://daveesvirtualstorelab.netlify.app/)
 - [API used for Products & Categories](https://davee-auth-api-server.herokuapp.com/)
 - [Lab36 Pull Request](https://github.com/davee-401-advanced-javascript/storefront/pull/1)
