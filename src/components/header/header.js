@@ -42,7 +42,7 @@ export default function Header() {
             aria-label="menu"
           ></IconButton>
           <Typography variant="h6" className={classes.title}>
-            Davee's Store
+            Davee's REACT / REDUX Store
           </Typography>
           <Button color="inherit" onClick={() => dispatch(toggle())}>
             Cart({cartLength})
