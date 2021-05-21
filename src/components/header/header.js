@@ -1,5 +1,5 @@
 import React from 'react';
-import {useSelector} from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -8,6 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 
+import { toggle } from '../../store/showCart.js';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,22 +24,24 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Header() {
   const classes = useStyles();
-  const cart = useSelector( state => state.cart);
+  const dispatch = useDispatch();
+
+  const cart = useSelector((state) => state.cart);
   let cartLength = Object.values(cart).reduce((acc, obj) => {
     return acc + obj.count;
-  },0);
+  }, 0);
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position='static'>
         <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            
-          </IconButton>
-          <Typography variant="h6" className={classes.title}>
+          <IconButton edge='start' className={classes.menuButton} color='inherit' aria-label='menu'></IconButton>
+          <Typography variant='h6' className={classes.title}>
             Davee's Store
           </Typography>
-          <Button color="inherit">Cart({cartLength})</Button>
+          <Button color='inherit' onClick={() => dispatch(toggle())}>
+            Cart({cartLength})
+          </Button>
         </Toolbar>
       </AppBar>
     </div>
