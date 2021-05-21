@@ -38,7 +38,9 @@ function Products() {
   let activeCategory = useSelector((state) => state.category.activeCategory);
 
   let products = useSelector((state) => state.products);
-  products = products.filter((product) => product.category === activeCategory.name);
+  products = products.filter(
+    (product) => product.category === activeCategory.name
+  );
 
   const add = (product) => {
     dispatch(addToCart(product));
@@ -48,33 +50,48 @@ function Products() {
 
   return (
     <>
-      <Container maxWidth='md' component='main'>
-        <Grid container spacing={5} alignItems='stretch'>
+      <Container maxWidth="md" component="main">
+        <Grid container spacing={5} alignItems="stretch">
           {products.map((product) => {
             return (
               <Grid item xs={12} sm={6} md={4} key={product._id}>
                 <Card className={classes.root}>
                   <CardActionArea>
-                    <CardMedia className={classes.media} image={product.imageUrl} />
+                    <CardMedia
+                      className={classes.media}
+                      image={product.imageUrl}
+                    />
                     <CardContent>
-                      <Typography gutterBottom variant='h5' component='h2'>
+                      <Typography gutterBottom variant="h5" component="h2">
                         {product.name}
                       </Typography>
-                      <Typography variant='body2' color='textSecondary' component='p'>
+                      <Typography
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                      >
                         {product.description}
                       </Typography>
-                      <Typography variant='body2' color='textSecondary' component='p'>
+                      <Typography
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                      >
                         In Stock:{product.inStock}
                       </Typography>
                     </CardContent>
                   </CardActionArea>
                   <CardActions>
                     <When condition={product.inStock > 0}>
-                      <Button onClick={() => add(product)} size='small' color='primary'>
+                      <Button
+                        onClick={() => add(product)}
+                        size="small"
+                        color="primary"
+                      >
                         Add to Cart
                       </Button>
                     </When>
-                    <Button size='small' color='primary'>
+                    <Button size="small" color="primary">
                       View Details
                     </Button>
                   </CardActions>

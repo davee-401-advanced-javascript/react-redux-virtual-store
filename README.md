@@ -1,8 +1,8 @@
-# Virtual Store Lab
+# React / Redux Virtual Store
 
-## Author: Davee Sok / Chris Bortel
+## Author: Davee Sok
 
-### Links and Resources:
+## Links and Resources:
 
 - [Front-End Application](https://daveesvirtualstorelab.netlify.app/)
 - [API used for Products & Categories](https://davee-auth-api-server.herokuapp.com/)
@@ -10,20 +10,8 @@
 - [Lab37 Pull Request](https://github.com/davee-401-advanced-javascript/storefront/pull/3)
 - [Lab38 Pull Request](https://github.com/davee-401-advanced-javascript/storefront/pull/5)
 
-### Tests:
-
-<!-- - How do you run tests?
-- Any tests of note?
-- Describe any tests that you did not complete, skipped, etc -->
-
-Currently No Tests Written.
-
-### UML:
-
-<!-- Link to an image of the UML for your application and response to events -->
-
 ```
-Pseduo Code
+Our Notes / Pseduo Code
 
 
 // Redux Store will have the following Reducers
@@ -88,13 +76,6 @@ Pseduo Code
             - products
           Actions
             - addToCart
-
-
-            // if product count is more than 0
-              // will need to deduct item from product
-            // do put request to update that product
-            // get all from database
-
 
 
     </StoreFront>

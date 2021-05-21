@@ -18,10 +18,10 @@ function Footer() {
 
   return (
     <>
-      <Container maxWidth='lg' component='footer' className={classes.footer}>
-        <Grid container spacing={4} justify='space-around'>
-          <Grid item xs={12} align='center'>
-            <Typography variant='h6' color='textPrimary' gutterBottom>
+      <Container maxWidth="lg" component="footer" className={classes.footer}>
+        <Grid container spacing={4} justify="space-around">
+          <Grid item xs={12} align="center">
+            <Typography variant="h6" color="textPrimary" gutterBottom>
               © Davee Sok
             </Typography>
           </Grid>

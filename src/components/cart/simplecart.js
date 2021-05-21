@@ -62,13 +62,20 @@ function SimpleCart() {
               <ListItem key={product[0]}>
                 <ListItemText primary={product[1].obj.name} />
                 <ListItemText secondary={'QTY: ' + product[1].count} />
-                <IconButton aria-label='delete' onClick={() => destroy(product[1])}>
+                <IconButton
+                  aria-label="delete"
+                  onClick={() => destroy(product[1])}
+                >
                   <DeleteIcon />
                 </IconButton>
               </ListItem>
             );
           })}
-          <Button variant='contained' color='primary' className={classes.button}>
+          <Button
+            variant="contained"
+            color="primary"
+            className={classes.button}
+          >
             Checkout
           </Button>
         </List>

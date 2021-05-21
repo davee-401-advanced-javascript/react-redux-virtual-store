@@ -33,13 +33,18 @@ export default function Header() {
 
   return (
     <div className={classes.root}>
-      <AppBar position='static'>
+      <AppBar position="static">
         <Toolbar>
-          <IconButton edge='start' className={classes.menuButton} color='inherit' aria-label='menu'></IconButton>
-          <Typography variant='h6' className={classes.title}>
+          <IconButton
+            edge="start"
+            className={classes.menuButton}
+            color="inherit"
+            aria-label="menu"
+          ></IconButton>
+          <Typography variant="h6" className={classes.title}>
             Davee's Store
           </Typography>
-          <Button color='inherit' onClick={() => dispatch(toggle())}>
+          <Button color="inherit" onClick={() => dispatch(toggle())}>
             Cart({cartLength})
           </Button>
         </Toolbar>
