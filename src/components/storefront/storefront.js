@@ -22,7 +22,7 @@ function StoreFront() {
   `;
 
   useEffect(() => {
-    dispatch(getCategories()).then(setLoading(false));
+    dispatch(getCategories()).then((result) => setLoading(false));
     dispatch(getProducts());
     // eslint-disable-next-line
   }, []);
