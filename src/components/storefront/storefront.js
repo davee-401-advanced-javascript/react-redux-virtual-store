@@ -31,7 +31,7 @@ function StoreFront() {
     <>
       <SimpleCart />
       <Categories />
-      <div className="sweet-loading">
+      <div>
         <MoonLoader
           color={'blue'}
           loading={loading}
